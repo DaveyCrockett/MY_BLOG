@@ -3,7 +3,7 @@
 {% block title %}Blog Posts{% endblock title %}
 
 {% block content %}
-    <h1>Blog Posts</h1>
+    <h1>Blog Posts Archive</h1>
     <ul>
         {% for post in post_list %}
             <li><a href="{% url 'blog_post_detail' post.id %}">{{ post.title }}</a></li> 

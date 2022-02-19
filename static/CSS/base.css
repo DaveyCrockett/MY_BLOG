@@ -1,0 +1,12 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    color: red;
+    font-weight: 800;
+}
+
+.main {
+    margin: 10px;
+}

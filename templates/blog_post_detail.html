@@ -4,7 +4,7 @@
 
 {% block content %}
     <h1>{{ post.title }}</h1>
-    <p><strong>By: {{ post.author }} | on {{ post.created_at }}</strong></p>
+    <p><strong>Post By: {{ post.author }} | on {{ post.created_at }}</strong></p>
     <p>{{ post.body }}</p>
     <a href="{% url 'edit_blog_post' post.id %}" class="btn btn-primary">Edit</a> |
     <a href="{% url 'delete_blog_post' post.id %}" class="btn btn-warning">Delete</a>

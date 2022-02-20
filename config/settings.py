@@ -126,7 +126,7 @@ if DEBUG:
         BASE_DIR / "static",
     ]
 else:
-    STATIC_ROOT = [str(BASE_DIR.joinpath('static'))]
+    STATIC_ROOT = (str(BASE_DIR.joinpath('static')), )
 
 
 MEDIA_URL = '/MEDIA/' 

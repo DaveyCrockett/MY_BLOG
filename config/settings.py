@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o63)f6as-6g@#visr#qv%6&cj$eyzsmk4alq3feifr_#wg@g%n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["david-walls-blog.herokuapp.com",
                     "127.0.0.1",
@@ -121,15 +121,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
-if not DEBUG:
-    STATIC_ROOT = BASE_DIR.joinpath('static')
+STATICFILES_DIRS = (str(BASE_DIR.joinpath('templates')), )
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 MEDIA_URL = '/MEDIA/' 
-MEDIA_ROOT = BASE_DIR.joinpath('MEDIA')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'MEDIA')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

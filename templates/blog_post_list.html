@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
-
 {% block title %}Blog Posts{% endblock title %}
-
 {% block content %}
+<div class="main-blog-list">
     {% for post in post_list %}
-    <div class="card mb-3">
+    <div class="card mb-3; card-container">
         {% load static %}
-        <img src="{{ post.image.url }}" class="card-img-top" alt="#">
+        {% if post.image %}
+        <img src="{{ post.image.url }}" class="card-img-top; blog-img" alt="#">
+        {% endif %}
         <div class="card-body">
         <h5 class="card-title">{{ post.title }}</h5>
         <p class="card-text">{{ post.body }}</p>
@@ -16,4 +17,5 @@
         </div>
     </div>
     {% endfor %}
+</div>
 {% endblock content %}

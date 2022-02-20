@@ -1,0 +1,16 @@
+.blog-img {
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.main-blog-list {
+    width: 65%;
+    display: grid;
+    grid: 600px / auto auto;
+    row-gap: 25px;
+    column-gap: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+

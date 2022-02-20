@@ -17,12 +17,13 @@ class PostDetailView(DetailView):
 class PostCreateView(LoginRequiredMixin, CreateView):
     template_name = "new_blog_post.html"
     model = Post
-    fields = ["title", "body", "author"]
+    fields = ["title", "body", "author", "image"]
 
 class PostUpdateView(LoginRequiredMixin , UserPassesTestMixin, UpdateView):
     template_name = "edit_blog_post.html"
     model = Post
-    fields = ["title", "body", "author"]
+    fields = ["title", "body", "author", "image"]
+    # ADD upload function for image
 
     def test_func(self):
         obj = self.get_object()

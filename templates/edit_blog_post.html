@@ -4,7 +4,7 @@
 
 {% block content %}
     <h1>Create New Blog Post on Archive</h1>
-    <form action="" method="post">
+    <form action="" enctype="multipart/form-data" method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="EDIT" class="btn btn-submit">

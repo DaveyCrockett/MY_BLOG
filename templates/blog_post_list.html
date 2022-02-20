@@ -4,7 +4,6 @@
 <div class="main-blog-list">
     {% for post in post_list %}
     <div class="card mb-3; card-container">
-        {% load static %}
         {% if post.image %}
         <img src="{{ post.image.url }}" class="card-img-top; blog-img" alt="#">
         {% endif %}

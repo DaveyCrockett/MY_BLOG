@@ -3,7 +3,7 @@
 {% block title %}{{ post.title }}{% endblock title %}
 
 {% block content %}
-    <h1>{{ post.title }}</h1>
+    <h1 class="detail-heading">{{ post.title }}</h1>
     <p><strong>Post By: {{ post.author }} | on {{ post.created_at }}</strong></p>
     <img src="{{ post.image.url }}" alt="user view" class="detail-img">
     <p>{{ post.body }}</p>

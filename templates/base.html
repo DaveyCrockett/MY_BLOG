@@ -33,8 +33,14 @@
                     <a class="nav-link" href="{% url 'new_blog_post' %}">New Blog Post</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                        <a class="nav-link" href="{% url 'home' %}">Dash</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About Me</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                    </li>                  
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'login' %}">Log In</a>

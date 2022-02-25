@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -123,8 +124,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 if DEBUG == True:
     STATICFILES_DIRS = [str(BASE_DIR.joinpath('static')), ]
-STATIC_ROOT = str(BASE_DIR.joinpath('static'))
+else:
+    STATIC_ROOT = str(BASE_DIR.joinpath('static'))
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressManifestStaticFilesStorage'
 
 MEDIA_URL = '/MEDIA/' 
 MEDIA_ROOT = str(BASE_DIR.joinpath('MEDIA'))

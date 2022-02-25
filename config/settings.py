@@ -127,7 +127,7 @@ if DEBUG == True:
 else:
     STATIC_ROOT = str(BASE_DIR.joinpath('static'))
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/MEDIA/' 
 MEDIA_ROOT = str(BASE_DIR.joinpath('MEDIA'))

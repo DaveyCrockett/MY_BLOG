@@ -123,8 +123,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 if DEBUG:
     STATICFILES_DIRS = [str(BASE_DIR.joinpath('static')), ]
-else:
-    STATIC_ROOT = str(BASE_DIR.joinpath('static'))
+STATIC_ROOT = str(BASE_DIR.joinpath('static'))
 
 
 MEDIA_URL = '/MEDIA/' 
